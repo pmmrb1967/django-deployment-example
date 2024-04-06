@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index - Django Level 4 - Relative Url</title>
+    
+    <!--Bootstrap 3 has reached end of life use latest version 5.3-->
+    <!--Old one :: https://getbootstrap.com/docs/3.4/getting-started/-->
+    <!--Latest  :: https://getbootstrap.com/docs/5.3/getting-started/download/-->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="container mt-3">
+      <!--h2>Example of Jumbotron</h2-->
+      <div class="p-5 mb-4 bg-light border rounded-3">
+        <h1>Welcome to relative url templates!</h1>
+        
+        <!--a href="basic_app/other.html">THE OTHER PAGE</a-->
+        <a href="{% url 'basic_app:other' %}">THE OTHER PAGE</a>
+        <!--
+        basic_app:other
+        
+        the 'basic_app' must be equal to the variable app_name in the urls.py
+        in folder basic_app.
+        the other must be the (name in the url) we are loking for inside the urls.py file 
+        in folder basic_app       
+        -->
+
+        <a href="{% url 'admin:index' %}">LINK TO ADMIN</a>
+        <a href="{% url 'index' %}">LINK TO INDEX</a>
+
+      </div>
+    </div>  
+
+  </body>
+</html>

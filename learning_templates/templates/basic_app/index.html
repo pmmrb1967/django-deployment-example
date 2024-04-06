@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+this part of the html code must be removed to use the TEMPLATE INHERITANCE
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Index - Django Level 4 - Relative Url</title>
+-->
+    
+    <!--Bootstrap 3 has reached end of life use latest version 5.3-->
+    <!--Old one :: https://getbootstrap.com/docs/3.4/getting-started/-->
+    <!--Latest  :: https://getbootstrap.com/docs/5.3/getting-started/download/-->
+
+<!--    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="container mt-3">
+-->
+      <!--h2>Example of Jumbotron</h2-->
+<!--
+      <div class="p-5 mb-4 bg-light border rounded-3">
+-->
+{% extends "basic_app/base.html" %} 
+    {% block body_block %}
+        <h1>Welcome to index!</h1>
+        <h1>This is index.html page showing!</h1>
+        
+        {% load my_extras %} <!-- add by PB in lesson TEMPLATE CUSTOMER FILTERS
+        Necessary to load the created module/file templatetags/my_extra.py -->
+        
+        {{ text|cutword:'hello' }}   <!-- add by PB in lesson TEMPLATE FILTERS, 'text' comes from the context_dict in views.py
+        CUSTOMER FILTERS:
+        'cutword' is the name of the string in the filter in the file templatetags/my_extras.py
+        -->
+   <!-- {{ text|upper }} -->   <!-- add by PB in lesson TEMPLATE FILTERS, 'text' comes from the context_dict in views.py-->
+        <h2>{{ number|add:"99" }}<h2> <!-- add by PB in lesson TEMPLATE FILTERS, 'number' comes from the context_dict in views.py-->
+    
+    {% endblock %}
+
+<!--
+      </div>
+    </div>  
+
+  </body>
+</html>
+-->
